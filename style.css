@@ -132,28 +132,36 @@ nav {
 .siswa span {
   color: yellow;
 } /* Moment */
+
 .moment {
   margin-top: 100px;
   text-align: center;
 }
-.moment .moment-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: center;
-  margin-top: 120px;
+
+.moment-card {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
+
+.moment-card .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moment-card h3 {
+  margin-top: 10px;
+}
+
 .moment-card img {
-  width: 100%;
-  max-width: 500px;
+  max-width: 350px;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.moment .moment-card h3 {
-  margin-top: 30px;
-}
-.moment .moment-card p {
-  margin-top: 10px;
-}
+
 .moment-card img:hover {
   transform: scale(1.05);
 }
