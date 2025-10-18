@@ -176,6 +176,9 @@ nav {
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 2.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .hero p {
@@ -240,6 +243,9 @@ nav {
 
   .hero h1 {
     font-size: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .hero p {
@@ -261,5 +267,28 @@ nav {
 
   .moment-card img {
     max-width: 300px;
+  }
+}
+
+/* Mobile zaman now */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .hero p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .wali img {
+    width: 150px;
+  }
+  .siswa img {
+    width: 120px;
+  }
+  .moment-card img {
+    max-width: 250px;
   }
 }
