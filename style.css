@@ -10,7 +10,6 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #000;
-  min-height: 9999px;
   color: white;
   padding-top: 70px;
 } /* Navbar */
@@ -136,6 +135,7 @@ nav {
 .moment {
   margin-top: 100px;
   text-align: center;
+  padding-bottom: 100px;
 }
 
 .moment-card {
@@ -172,30 +172,65 @@ nav {
   color: white;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .wali img {
+    width: 250px;
+  }
+
+  .siswa .image-card {
+    gap: 2.5rem;
+  }
+  .siswa img {
+    width: 180px;
+  }
+
+  .moment {
+    padding-bottom: 100px;
+  }
+  .moment-card img {
+    max-width: 320px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .navbar-menu {
     position: fixed;
-    top: 0;
-    right: -100%; /* sembunyi dulu */
-    width: 40%;
-    height: 100vh;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 30vh;
     background: rgba(0, 0, 0, 0.95);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding-top: 2rem;
+    padding: 20px 0;
     gap: 2rem;
-    transition: right 0.4s ease;
+    transition: top 0.4s ease;
     margin-right: 0;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .navbar-menu.active {
-    right: 0; /* muncul dari kanan */
+    top: 60px; /* muncul di bawah navbar */
+    visibility: visible;
+    opacity: 1;
   }
 
   .burger-icon {
-    display: flex; /* muncul di layar kecil */
+    display: block; /* muncul di layar kecil */
   }
 
   /* biar brand gak kejepit */
@@ -205,6 +240,15 @@ nav {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .wali img {
+    width: 200px;
   }
 
   .siswa .image-card {
